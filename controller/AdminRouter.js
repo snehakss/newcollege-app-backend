@@ -12,4 +12,13 @@ router.post("/adminlogin",async(req,res)=>{
     })
 })
 
+router.post("/addmarks",async(req,res)=>{
+    let data=req.body
+    let addss=new AdminModel(data)
+    let result=await addss.save()
+    res.json({
+        status:"success"
+    })
+})
+
 module.exports=router
