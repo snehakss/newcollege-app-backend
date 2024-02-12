@@ -2,10 +2,9 @@ const mongoose=require("mongoose")
 
 const studentSchema=new mongoose.Schema(
     {
-        UserId:{
-            type:mongoose.Schema.Types.ObjectId,
+        emailId:{
+            type:String,
             required:true,
-            ref:"user"
         },
         password:{
             type:String,

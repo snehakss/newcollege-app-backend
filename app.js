@@ -3,6 +3,7 @@ const cors=require("cors")
 const mongoose=require("mongoose")
 
 const AdminRoute=require("./controller/AdminRouter")
+const StudentRoute=require("./controller/StudentRouter")
 
 const app=express()
 app.use(express.json())
@@ -13,6 +14,7 @@ mongoose.connect("mongodb+srv://snehaks:Snehaks2000@cluster0.rauhjed.mongodb.net
 )
 
 app.use("/api/admin",AdminRoute)
+app.use("/api/student",StudentRoute)
 
 app.listen(3001,()=>{
     console.log("server running")
