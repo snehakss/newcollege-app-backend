@@ -21,4 +21,14 @@ router.post("/addmarks",async(req,res)=>{
     })
 })
 
+router.post("/addStudents",async(req,res)=>{
+    let data=req.body
+    let adds=new AdminModel(data)
+    let result=await adds.save()
+    res.json({
+        status:"success"
+    })
+})
+
+
 module.exports=router
