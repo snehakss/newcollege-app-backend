@@ -1,6 +1,15 @@
 const express=require("express")
-const StudentRoute=require("../model/StudentModel")
+const StudentModel=require("../model/StudentModel")
 
 const router=express.Router()
 
-router.
+router.post("/studentLogin",async(req,res)=>{
+    let data=req.body
+    let addss=new StudentModel(data)
+    let result=await addss.save()
+    res.json({
+        status:"success"
+    })
+})
+
+module.exports=router
