@@ -3,6 +3,8 @@ const AdminModel=require("../model/AdminModel")
 
 const router=express.Router()
 
+
+
 router.post("/adminlogin",async(req,res)=>{
     let data=req.body
     let adminss=new AdminModel(data)
@@ -20,5 +22,8 @@ router.post("/addmarks",async(req,res)=>{
         status:"success"
     })
 })
+
+
+
 
 module.exports=router
